@@ -61,10 +61,12 @@ public class UserBank {
 
 
         } catch (AccountException e) {
-            System.err.println("Ошибка с реквизитами банка. Возможно, номер карты отправителя и получателя совпадают.");
+            //System.err.println("Ошибка с реквизитами банка. Возможно, номер карты отправителя и получателя совпадают.");
+            System.err.println(e.getMessage());
         } catch (MoneyValueException e) {
-            System.err.println("Ошибка с суммой отправки. Сумма должна быть больше 0. Сумма не должна превышать " +
-                    "лимит в 100 000");
+            //System.err.println("Ошибка с суммой отправки. Сумма должна быть больше 0. Сумма не должна превышать " +
+            //        "лимит в 100 000");
+            System.err.println(e.getMessage());
         }
     }
 }
